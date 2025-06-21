@@ -1,16 +1,16 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>TodoHybrid</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
-</head>
-<body>
-      <div class="container" ng-controller="TodoController as vm">
+<!DOCTYPE html>
+<html ng-app="todoApp">
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Todo App</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="container" ng-controller="TodoController as vm">
       <h1>My Todo List</h1>
 
       <!-- Notification -->
@@ -97,6 +97,11 @@
         vm.getCompletionRate() }}%
       </div>
     </div>
-  <app-root></app-root>
-</body>
+
+    <script src="app/app.module.js"></script>
+    <script src="services/todo.service.js"></script>
+    <script src="services/notification.service.js"></script>
+    <script src="services/storage.service.js"></script>
+    <script src="controllers/todo.controller.js"></script>
+  </body>
 </html>
